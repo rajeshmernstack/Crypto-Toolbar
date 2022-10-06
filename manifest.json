@@ -1,0 +1,43 @@
+{
+  "name": "Crypto Toolbar",
+  "description": "Toolbar for Cryptocurrency Rates",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "/images/icon.png",
+    "32": "/images/icon.png",
+    "48": "/images/icon.png",
+    "128": "/images/icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/icon.png",
+      "32": "/images/icon.png",
+      "48": "/images/icon.png",
+      "128": "/images/icon.png"
+    }
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "cookies",
+    "tabs",
+    "webNavigation",
+    "downloads",
+    "contextMenus"
+  ],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["toolbar.html","toolbar.js"],
+      "matches": ["<all_urls>"],
+      "extension_ids": []
+    }
+  ]
+}
